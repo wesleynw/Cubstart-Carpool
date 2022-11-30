@@ -8,12 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var location: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Spacer()
+                Image(systemName: "car")
+                    .padding(/*@START_MENU_TOKEN@*/.bottom/*@END_MENU_TOKEN@*/)
+                    .imageScale(.large)
+                    .foregroundColor(.black)
+                Text("Where would you like to go?")
+                    .font(.title2)
+                    .fontWeight(.black)
+                HStack {
+                    TextField(text: $location, prompt: Text("Search for a location...")
+                        .fontWeight(.heavy)) {}
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).textFieldStyle(.roundedBorder)
+                }
+                HStack {
+                    Button("Submit") {}
+                    Text("or")
+                    
+                    
+                    NavigationLink(destination: CreateView()) {
+                        Text("Start a Carpool")
+
+                    } .padding()
+                
+                    
+//                    NavigationLink(destination: CarpoolApp() { EmptyView() } .padding()
+//                    Button("Start a Carpool") {}
+                }
+                Spacer()
+                HStack {
+                    Text("Searching for Carpools from")
+                    Text("Berkeley").foregroundColor(.blue)
+                    Image(systemName: "location.fill")
+                        .imageScale(.small)
+                        .foregroundColor(.blue)
+                }
+            }
         }
         .padding()
     }
