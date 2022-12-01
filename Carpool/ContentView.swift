@@ -26,20 +26,11 @@ struct ContentView: View {
                         .fontWeight(.heavy)) {}
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).textFieldStyle(.roundedBorder)
                 }
-                HStack {
-                    Button("Submit") {}
-                    Text("or")
-                    
-                    
-                    NavigationLink(destination: CreateView()) {
-                        Text("Start a Carpool")
-
-                    } .padding()
                 
-                    
-//                    NavigationLink(destination: CarpoolApp() { EmptyView() } .padding()
-//                    Button("Start a Carpool") {}
+                NavigationLink(destination: CarpoolView()) {
+                    Text("Submit")
                 }
+            
                 Spacer()
                 HStack {
                     Text("Searching for Carpools from")

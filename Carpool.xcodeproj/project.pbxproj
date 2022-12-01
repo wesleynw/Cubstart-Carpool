@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		187614642936E86500372D77 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187614632936E86400372D77 /* CreateView.swift */; };
+		1899187B29382AC300B481D8 /* CarpoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899187A29382AC300B481D8 /* CarpoolView.swift */; };
+		1899187F29382B9C00B481D8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899187E29382B9C00B481D8 /* CustomCell.swift */; };
+		1899188129382BF900B481D8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899188029382BF900B481D8 /* PostCell.swift */; };
+		18BBF144293725E5004FDDB5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBF143293725E5004FDDB5 /* ViewModel.swift */; };
 		18F4005A2936D47F00BBF51B /* CarpoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F400592936D47F00BBF51B /* CarpoolApp.swift */; };
 		18F4005C2936D47F00BBF51B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4005B2936D47F00BBF51B /* ContentView.swift */; };
 		18F4005E2936D48200BBF51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F4005D2936D48200BBF51B /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		187614632936E86400372D77 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		1899187A29382AC300B481D8 /* CarpoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpoolView.swift; sourceTree = "<group>"; };
+		1899187E29382B9C00B481D8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		1899188029382BF900B481D8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		18BBF143293725E5004FDDB5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		18F400562936D47F00BBF51B /* Carpool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F400592936D47F00BBF51B /* CarpoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpoolApp.swift; sourceTree = "<group>"; };
 		18F4005B2936D47F00BBF51B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +66,10 @@
 				18F4005D2936D48200BBF51B /* Assets.xcassets */,
 				18F4005F2936D48200BBF51B /* Preview Content */,
 				187614632936E86400372D77 /* CreateView.swift */,
+				18BBF143293725E5004FDDB5 /* ViewModel.swift */,
+				1899187A29382AC300B481D8 /* CarpoolView.swift */,
+				1899187E29382B9C00B481D8 /* CustomCell.swift */,
+				1899188029382BF900B481D8 /* PostCell.swift */,
 			);
 			path = Carpool;
 			sourceTree = "<group>";
@@ -140,9 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1899188129382BF900B481D8 /* PostCell.swift in Sources */,
 				18F4005C2936D47F00BBF51B /* ContentView.swift in Sources */,
 				187614642936E86500372D77 /* CreateView.swift in Sources */,
+				18BBF144293725E5004FDDB5 /* ViewModel.swift in Sources */,
 				18F4005A2936D47F00BBF51B /* CarpoolApp.swift in Sources */,
+				1899187F29382B9C00B481D8 /* CustomCell.swift in Sources */,
+				1899187B29382AC300B481D8 /* CarpoolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
