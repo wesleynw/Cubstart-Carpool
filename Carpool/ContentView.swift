@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var location: String = ""
-    
+    @State var placeholder: String = ""
     var body: some View {
         NavigationView {
             VStack {
@@ -22,15 +21,13 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.black)
                 HStack {
-                    TextField(text: $location, prompt: Text("Search for a location...")
+                    TextField(text: $placeholder, prompt: Text("Search for a location...")
                         .fontWeight(.heavy)) {}
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).textFieldStyle(.roundedBorder)
                 }
                 
-                NavigationLink(destination: CarpoolView()) {
-                    Text("Submit")
-                }
-            
+                NavigationLink(destination: CarpoolView(), label: {Text("Submit")})
+                
                 Spacer()
                 HStack {
                     Text("Searching for Carpools from")
@@ -41,7 +38,6 @@ struct ContentView: View {
                 }
             }
         }
-        .padding()
     }
 }
 

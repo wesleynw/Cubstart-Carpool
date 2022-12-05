@@ -1,8 +1,7 @@
 //
-//  CustomCell.swift
-//  Shopping List 2
+//  PostCell.swift
 //
-//  Created by Tony Hong on 3/27/22.
+//  Created by Wesley Weisenberger on 12/5/22.
 //
 
 import SwiftUI
@@ -15,13 +14,7 @@ struct mapCell: View {
     }
 }
 
-
-
-
-
-
-struct PostCell: View {
-
+struct PostCell: View {    
     var driverName: String
     
     var destination: String
@@ -31,64 +24,60 @@ struct PostCell: View {
     var seats: Int
     
     var body: some View {
-            HStack {
-                VStack{
+        HStack {
+            VStack {
+                HStack {
                     Text(driverName)
                         .font(.title)
                         .fontWeight(.heavy)
-                    
-                    
                     Spacer()
-                    
-                    HStack{
-                        Text("is driving from ")
-                        Text("\(destination)")
-                            .fontWeight(.heavy)
-                    }
-                    
-                    Spacer()
-                    
-                    HStack{
-                        Text("to ")
-                        Text("\(origin)")
-                            .fontWeight(.heavy)
-                    }
-                    
-                    Spacer()
-                    
-                    HStack{
-                        Text("\(seats)")
-                            .fontWeight(.heavy)
-                        Text(" seats left")
-                    }
-                    
-                    Spacer()
-                    
-                    Image(systemName: "plus.message")
-//                        .imageScale(.small)
-                        .foregroundColor(.blue)
-                    
                 }
-                
-                
-                Spacer()
-                
-                mapCell()
+                HStack {
+                    VStack {
+                        Image(systemName: "a.circle")
+                        Text("")
+                        Image(systemName: "arrow.down")
+                        Text("")
+                        Image(systemName: "b.circle")
+                    }
+                    VStack {
+                        HStack {
+                            Text(origin)
+                                .foregroundColor(Color.blue)
+                            Spacer()
+                        }
+                        Text("")
+                        HStack {
+                            Image(systemName: "gauge.medium")
+                            Text("690 miles")
+                            Spacer()
+                        }
+                        Text("")
+                        HStack {
+                            Text(destination)
+                                .foregroundColor(Color.blue)
+                            Spacer()
+                        }
+                    }
+                    Spacer()
+                }
+                Text("")
+                HStack {
+                    Text("2 of 3 Seats Available")
+                    Spacer()
+                    Image(systemName: "plus.message")
+                        .foregroundColor(.blue)
+                }
             }
-    }
-}
-
-struct PhoneNumberView: View {
-    
-    @State var phoneNumber: String = "310-123-7890"
-    
-    var body: some View {
-            Text("\(phoneNumber)")
-
+            Spacer()
+        }
     }
     
+    struct Previews_PostCell_Previews: PreviewProvider {
+        static var previews: some View {
+            List {
+                PostCell(driverName: "John Smith", destination: "Anchorage, Alaska", origin: "Berkeley, California", seats: 3)
+            }
+        }
+    }
 }
-    
-    
-    
-//NavigationLink(destination: ResultView(prob: $probability, feedback: $text), isActive: $calculate) { EmptyView() } .padding()
