@@ -65,8 +65,13 @@ struct PostCell: View {
                 HStack {
                     Text("2 of 3 Seats Available")
                     Spacer()
-                    Image(systemName: "plus.message")
-                        .foregroundColor(.blue)
+                    
+                    Button {
+                        UIApplication.shared.open(URL(string: "sms://800-555-1212")!)
+                    } label: {
+                        Image(systemName: "plus.message")
+                            .foregroundColor(.blue)
+                    }.buttonStyle(PlainButtonStyle())
                 }
             }
             Spacer()

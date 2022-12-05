@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct CreateView: View {
-    @State var placeholder: String = ""
-    
+    @State var driverName: String = ""
+    @State var driverOrigin: String = ""
+    @State var driverDestination: String = ""
+    @State var driverCarSize: String = ""
+    @State var driverPickupRad: String = ""
+
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
         List {
-            TextField(text: $placeholder, prompt: Text("Name...")) {
+            TextField(text: $driverName, prompt: Text("Name...")) {
                 Text("aaa")
             }
-            TextField(text: $placeholder, prompt: Text("From...")) {
+            TextField(text: $driverOrigin, prompt: Text("From...")) {
                 Text("aaa")
             }
-            TextField(text: $placeholder, prompt: Text("To...")) {
+            TextField(text: $driverDestination, prompt: Text("To...")) {
                 Text("aaa")
             }
-            TextField(text: $placeholder, prompt: Text("Car size")) {
+            TextField(text: $driverCarSize, prompt: Text("Car size")) {
                 Text("aaa")
             }
-            TextField(text: $placeholder, prompt: Text("Pickup Radius")) {
+            TextField(text: $driverPickupRad, prompt: Text("Pickup Radius")) {
                 Text("aaa")
             }
         }.navigationTitle("Create a Carpool")
