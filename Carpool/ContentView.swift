@@ -16,7 +16,7 @@ struct ContentView: View {
                 Image(systemName: "car")
                     .padding(/*@START_MENU_TOKEN@*/.bottom/*@END_MENU_TOKEN@*/)
                     .imageScale(.large)
-                    .foregroundColor(.black)
+//                    .foregroundColor(.black)
                 Text("Where would you like to go?")
                     .font(.title2)
                     .fontWeight(.black)
